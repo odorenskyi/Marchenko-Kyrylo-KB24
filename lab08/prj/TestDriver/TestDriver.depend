@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1743971559 source:/run/user/1000/doc/367f9eb8/Development/BMTP/Marchenko-Kyrylo-KB24/lab08/prj/TestDriver/main.cpp
+	<iostream>
+	"ModulesMarchenko.h"
+
+1743970846 /mnt/data/Development/BMTP/Marchenko-Kyrylo-KB24/lab08/prj/ModulesMarchenko.h
+
+1743972174 source:/home/mikroffarad/BMTP/Marchenko-Kyrylo-KB24/lab08/prj/TestDriver/main.cpp
+	<iostream>
+	<sstream>
+	<iomanip>
+	<cmath>
+	"ModulesMarchenko.h"
+
+1743971649 /home/mikroffarad/BMTP/Marchenko-Kyrylo-KB24/lab08/prj/ModulesMarchenko.h
+
