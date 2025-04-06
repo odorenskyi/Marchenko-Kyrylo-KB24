@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1743975691 source:/home/mikroffarad/BMTP/Marchenko-Kyrylo-KB24/lab08/prj/Marchenko_task/main.cpp
+	<iostream>
+	<iomanip>
+	<cmath>
+	"ModulesMarchenko.h"
+
+1743971649 /home/mikroffarad/BMTP/Marchenko-Kyrylo-KB24/lab08/prj/ModulesMarchenko.h
+
