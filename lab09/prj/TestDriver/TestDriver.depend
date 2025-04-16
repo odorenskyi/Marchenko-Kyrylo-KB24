@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1744815739 source:c:\users\mikroffarad\mikroffarad\development\bmtp\marchenko-kyrylo-kb24\lab09\prj\testdriver\main.cpp
+	<iostream>
+	<iomanip>
+	<cmath>
+	"ModulesMarchenko.h"
+
+1744814481 c:\users\mikroffarad\mikroffarad\development\bmtp\marchenko-kyrylo-kb24\lab08\prj\modulesmarchenko.h
+

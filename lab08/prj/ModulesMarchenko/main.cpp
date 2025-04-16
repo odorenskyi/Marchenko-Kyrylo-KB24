@@ -116,21 +116,25 @@ SockSize convertSockSize(int size_UA) {
 // - Кількість двійкових "1", якщо D0 рівний 1.
 // Підрахунок здійснюється за допомогою тернарного оператора.
 int countBinarySymbols(unsigned int N) {
-    // Отримання рядка, що містить двійкове представлення числа N
-    // За умовчанням використовуємо 32-бітне представлення
+    // Отримання 32-бітного рядка з двійковим представленням числа N
     std::string binaryStr = std::bitset<32>(N).to_string();
 
-    // Для аналізу можна видалити ведучі нулі, якщо потрібно:
-    // size_t pos = binaryStr.find('1');
-    // if (pos != std::string::npos) binaryStr = binaryStr.substr(pos);
-    // else binaryStr = "0";
+    // Обрізаємо ведучі нулі, щоб аналізувати лише значущу частину
+    size_t pos = binaryStr.find('1');
+    if (pos != std::string::npos) {
+        binaryStr = binaryStr.substr(pos);
+    } else {
+        // Якщо число 0, то встановлюємо рядок "0"
+        binaryStr = "0";
+    }
 
-    // Перевірка молодшого біту:
+    // Перевірка молодшого біту (LSB)
     bool leastSignificantBit = (N & 1);
-    // Використання тернарного оператора для вибору символу, який потрібно рахувати:
+    // Використовуємо тернарний оператор для визначення, який символ рахувати:
+    // якщо молодший біт = 0 – рахуємо '0', інакше – '1'.
     char targetChar = (leastSignificantBit == 0) ? '0' : '1';
 
-    // Підрахунок за допомогою std::count
+    // Підрахунок символів targetChar у обрізаному рядку
     int count = std::count(binaryStr.begin(), binaryStr.end(), targetChar);
     return count;
 }
