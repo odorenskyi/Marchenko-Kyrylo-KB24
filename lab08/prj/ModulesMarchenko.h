@@ -22,4 +22,8 @@ struct SockSize {
 SockSize convertSockSize(int size_UA);
 int countBinarySymbols(unsigned int N);
 
+bool task10_1(const char* inputFile, const char* outputFile);
+bool task10_2(const char* inputFile);
+bool task10_3(const char* outputFile, double x, double y, double z, int b);
+
 #endif // MODULESMARCHENKO_H_INCLUDED

@@ -199,6 +199,14 @@ bool task10_1(const char* inputFile, const char* outputFile) {
 }
 
 bool task10_2(const char* inputFile) {
+    // Перевіряємо існування файлу
+    FILE* file = fopen(inputFile, "r");
+    if (file == nullptr) {
+        std::cerr << "Помилка відкриття файлу для перевірки: " << inputFile << std::endl;
+        return false;
+    }
+    fclose(file);
+
     // Відкриваємо файл для дозапису
     std::ofstream outFile(inputFile, std::ios::app);
     if (!outFile.is_open()) {
@@ -222,17 +230,26 @@ bool task10_2(const char* inputFile) {
 }
 
 bool task10_3(const char* outputFile, double x, double y, double z, int b) {
+    // Перевірка на доступ до файлу за допомогою низькорівневої функції
+    FILE* file = fopen(outputFile, "a");
+    if (file == nullptr) {
+        std::cerr << "Помилка відкриття вихідного файлу для перевірки доступу: " << outputFile << std::endl;
+        return false;
+    }
+    fclose(file);
+
     // Обчислюємо результат за допомогою функції з заголовкового файлу
     double result = s_calculation(x, y, z);
 
     // Перетворюємо число b у двійковий код
     std::string binaryB;
-    if (b == 0) {
+    int temp_b = b;  // створюємо тимчасову копію b, щоб не змінювати оригінал
+    if (temp_b == 0) {
         binaryB = "0";
     } else {
-        while (b > 0) {
-            binaryB = (b % 2 == 0 ? "0" : "1") + binaryB;
-            b /= 2;
+        while (temp_b > 0) {
+            binaryB = (temp_b % 2 == 0 ? "0" : "1") + binaryB;
+            temp_b /= 2;
         }
     }
 
@@ -246,7 +263,8 @@ bool task10_3(const char* outputFile, double x, double y, double z, int b) {
     // Записуємо результати у файл
     outFile << std::endl << std::endl;
     outFile << "Результат обчислення функції s_calculation("
-            << x << ", " << y << ", " << z << ") = " << result << std::endl;
+            << std::fixed << std::setprecision(6) << x << ", " << y << ", " << z << ") = "
+            << (std::isnan(result) ? std::string("NaN") : std::to_string(result)) << std::endl;
     outFile << "Число " << b << " у двійковому коді: " << binaryB;
 
     outFile.close();
