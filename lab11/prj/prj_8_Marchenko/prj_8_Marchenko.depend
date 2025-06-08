@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1749398336 source:c:\users\administrator\mikroffarad\development\bmtp\marchenko-kyrylo-kb24\lab11\prj\prj_8_marchenko\main.cpp
+	<iostream>
+	<string>
+	<vector>
+	<limits>
+	"struct_type_project_8.h"
+	"struct_type_project_Kurtiak.h"
+	"struct_type_project_Ivanov.h"
+	"struct_type_project_Marchenko.h"
+
+1749291238 c:\users\administrator\mikroffarad\development\bmtp\marchenko-kyrylo-kb24\lab11\prj\struct_type_project_8.h
+	<string>
+
+1749398291 c:\users\administrator\mikroffarad\development\bmtp\marchenko-kyrylo-kb24\lab11\prj\libkurtiak\struct_type_project_kurtiak.h
+	"struct_type_project_8.h"
+	<vector>
+
+1749398306 c:\users\administrator\mikroffarad\development\bmtp\marchenko-kyrylo-kb24\lab11\prj\libivanov\struct_type_project_ivanov.h
+	"struct_type_project_8.h"
+
+1749291364 c:\users\administrator\mikroffarad\development\bmtp\marchenko-kyrylo-kb24\lab11\prj\libmarchenko\struct_type_project_marchenko.h
+	"struct_type_project_8.h"
+

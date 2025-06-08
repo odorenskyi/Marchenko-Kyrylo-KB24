@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1749310106 source:f:\ivanov-daniil-kb24\lab11\prj\libivanov\struct_type_project_ivanov.cpp
+	"struct_type_project_Ivanov.h"
+
+1749310095 f:\ivanov-daniil-kb24\lab11\prj\libivanov\struct_type_project_ivanov.h
+	"struct_type_project_8.h"
+
+1749308439 f:\ivanov-daniil-kb24\lab11\prj\struct_type_project_8.h
+	<string>
+

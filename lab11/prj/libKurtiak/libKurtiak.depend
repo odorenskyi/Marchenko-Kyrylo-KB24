@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1749310337 source:c:\users\Катерина\desktop\11.1\prj\libkurtiak\struct_type_project_kurtiak.cpp
+	"struct_type_project_Kurtiak.h"
+	<fstream>
+	<vector>
+
+1749310338 c:\users\Катерина\desktop\11.1\prj\libkurtiak\struct_type_project_kurtiak.h
+	"struct_type_project_8.h"
+	<vector>
+
+1749310411 c:\users\Катерина\desktop\11.1\prj\struct_type_project_8.h
+	<string>
+
